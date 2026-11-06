@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Rod.com - The Ultimate Fishing, Boating & Sporting Portal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        marine: {
+                            800: '#0c2a4a',
+                            900: '#061729',
+                            950: '#030c17',
+                        },
+                        amber: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        moss: {
+                            600: '#4d7c0f',
+                            800: '#2d4a07',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-dark {
+            background: rgba(6, 23, 41, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(3,12,23,0.6) 0%, rgba(3,12,23,0.95) 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-amber-500 text-slate-950 text-xs py-2 px-4 text-center font-bold tracking-wide">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+            <i class="fa-solid fa-compass"></i>
+            <span>4ROD.COM OUTDOOR HUB: Comprehensive Guides for Fishing, Marine Electronics, Boats, Prime Locations & Hunting</span>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-dark border-b border-slate-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 flex items-center justify-center font-black text-2xl shadow-lg group-hover:scale-105 transition transform">
+                    4R
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-tight text-white">4Rod<span class="text-amber-500">.com</span></span>
+                    <span class="block text-[10px] uppercase tracking-widest text-slate-400 font-bold">Fishing • Marine • Outdoors • Hunting</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-300">
+                <a href="#cat-rods" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-solid fa-fish text-amber-500"></i> Rods & Tackle</a>
+                <a href="#cat-boats" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-solid fa-ship text-sky-400"></i> Boats & Tech</a>
+                <a href="#cat-locations" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-solid fa-map-location-dot text-emerald-400"></i> Best Locations</a>
+                <a href="#cat-gear" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-solid fa-vest text-amber-500"></i> Apparel & Gear</a>
+                <a href="#cat-hunting" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-solid fa-crosshairs text-moss-600"></i> Hunting & Sporting</a>
+            </nav>
+
+            <!-- Quick Action Button -->
+            <div class="flex items-center gap-3">
+                <a href="#explorer" class="bg-amber-500 hover:bg-amber-600 text-slate-950 text-xs font-black uppercase tracking-wider px-5 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Explore Guides</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Showcase Section -->
+    <section class="relative bg-marine-950 text-white py-20 px-4 border-b border-slate-800 overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-6xl mx-auto text-center relative z-10 space-y-6">
+            <span class="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 border border-amber-500/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                <i class="fa-solid fa-anchor"></i> The Ultimate Sportsman's Knowledge Base
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-none">
+                Master the Water & The Wild.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-sky-400">Rods, Boats, Tackle & Expeditions.</span>
+            </h1>
+            <p class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+                Expert tackle reviews, boat rig setups, marine radar guides, trophy fishing destinations, and seasonal hunting tactical blueprints—all in one place.
+            </p>
+
+            <!-- Quick Jump Category Pills -->
+            <div class="flex flex-wrap items-center justify-center gap-3 pt-6 max-w-4xl mx-auto">
+                <a href="#cat-rods" class="bg-slate-900/90 hover:bg-slate-800 text-white border border-slate-700 text-xs font-bold px-5 py-3 rounded-2xl transition flex items-center gap-2 shadow-lg">
+                    <i class="fa-solid fa-fish text-amber-400"></i> Rods & Combos
+                </a>
+                <a href="#cat-boats" class="bg-slate-900/90 hover:bg-slate-800 text-white border border-slate-700 text-xs font-bold px-5 py-3 rounded-2xl transition flex items-center gap-2 shadow-lg">
+                    <i class="fa-solid fa-ship text-sky-400"></i> Boats & Electronics
+                </a>
+                <a href="#cat-locations" class="bg-slate-900/90 hover:bg-slate-800 text-white border border-slate-700 text-xs font-bold px-5 py-3 rounded-2xl transition flex items-center gap-2 shadow-lg">
+                    <i class="fa-solid fa-map-pin text-emerald-400"></i> Top Hotspots
+                </a>
+                <a href="#cat-hunting" class="bg-slate-900/90 hover:bg-slate-800 text-white border border-slate-700 text-xs font-bold px-5 py-3 rounded-2xl transition flex items-center gap-2 shadow-lg">
+                    <i class="fa-solid fa-crosshairs text-lime-400"></i> Hunting & Waterfowl
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Explorer Dashboard -->
+    <main id="explorer" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow space-y-20">
+
+        <!-- SECTION 1: RODS, REELS & TACKLE HUB -->
+        <section id="cat-rods" class="scroll-mt-28 space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-800 pb-6 gap-4">
+                <div>
+                    <div class="flex items-center gap-2 text-amber-400 font-bold text-xs uppercase tracking-widest mb-2">
+                        <i class="fa-solid fa-fish"></i> Category #1 • Tackle & Gear
+                    </div>
+                    <h2 class="text-3xl font-extrabold text-white">Rods, Reels & Terminal Tackle</h2>
+                    <p class="text-slate-400 text-sm">Tested and ranked for sensitivity, backbone, drag performance, and longevity.</p>
+                </div>
+                <div class="flex gap-2">
+                    <span class="bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs px-3 py-1.5 rounded-lg font-semibold">Saltwater & Freshwater</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Guide Card 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition group shadow-xl">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition transform">
+                            <i class="fa-solid fa-water font-black"></i>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold text-amber-400 tracking-widest block mb-1">Inshore & Offshore Combos</span>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition">Top 4 Saltwater Spinning Rods for Striped Bass & Tarpon</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Evaluating backbone, fast action taper, and corrosion-resistant guides (Fuji K-Frame) across coastal waters.
+                        </p>
+                        <div class="space-y-2 text-xs text-slate-300 mb-6 bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+                            <div class="flex justify-between"><span class="text-slate-500">Top Overall:</span> <strong class="text-white">St. Croix Mojo Salt</strong></div>
+                            <div class="flex justify-between"><span class="text-slate-500">Best Value:</span> <strong class="text-white">Penn Rampage II</strong></div>
+                            <div class="flex justify-between"><span class="text-slate-500">Ultra-Light:</span> <strong class="text-white">Shimano Teramar</strong></div>
+                        </div>
+                    </div>
+                    <a href="#guide-detail" class="w-full text-center bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+                        <span>Read Comparison Guide</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Guide Card 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition group shadow-xl">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 border border-sky-500/20 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition transform">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold text-sky-400 tracking-widest block mb-1">Freshwater Tournament</span>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition">Baitcasting Rod Tactics for Largemouth Bass</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Heavy cover flipping, frog fishing, and deep crankbait rod setups tailored for tournament anglers.
+                        </p>
+                        <div class="space-y-2 text-xs text-slate-300 mb-6 bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+                            <div class="flex justify-between"><span class="text-slate-500">Sensitivity:</span> <strong class="text-white">G. Loomis NRX+</strong></div>
+                            <div class="flex justify-between"><span class="text-slate-500">Power Pitching:</span> <strong class="text-white">Dobyns Champion XP</strong></div>
+                            <div class="flex justify-between"><span class="text-slate-500">Durability:</span> <strong class="text-white">Ugly Stik Elite</strong></div>
+                        </div>
+                    </div>
+                    <a href="#guide-detail" class="w-full text-center bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+                        <span>Read Comparison Guide</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Guide Card 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition group shadow-xl">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition transform">
+                            <i class="fa-solid fa-feather-pointed"></i>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold text-emerald-400 tracking-widest block mb-1">Fly Fishing & Streams</span>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition">4-Piece Travel Fly Rods for Trout & Salmon</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Compact fly rod setups for backcountry stream hiking, Alaska wilderness floats, and bonefish flats.
+                        </p>
+                        <div class="space-y-2 text-xs text-slate-300 mb-6 bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+                            <div class="flex justify-between"><span class="text-slate-500">Smooth Action:</span> <strong class="text-white">Orvis Helios 4</strong></div>
+                            <div class="flex justify-between"><span class="text-slate-500">Saltwater Flats:</span> <strong class="text-white">Sage R8 CORE</strong></div>
+                            <div class="flex justify-between"><span class="text-slate-500">Best Outfit:</span> <strong class="text-white">Redington Path Combo</strong></div>
+                        </div>
+                    </div>
+                    <a href="#guide-detail" class="w-full text-center bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+                        <span>Read Comparison Guide</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: BOATS & MARINE TECH -->
+        <section id="cat-boats" class="scroll-mt-28 space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-800 pb-6 gap-4">
+                <div>
+                    <div class="flex items-center gap-2 text-sky-400 font-bold text-xs uppercase tracking-widest mb-2">
+                        <i class="fa-solid fa-ship"></i> Category #2 • Marine Rigging & Vessels
+                    </div>
+                    <h2 class="text-3xl font-extrabold text-white">Fishing Boats, Electronics & Trolling Motors</h2>
+                    <p class="text-slate-400 text-sm">Center consoles, bass skiffs, kayak rigging, live-sonar fishfinders, and GPS anchors.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Boat Rigging Card 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col justify-between hover:border-sky-500/50 transition group shadow-xl">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 border border-sky-500/20 flex items-center justify-center text-xl mb-5">
+                            <i class="fa-solid fa-radar"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Live-Scope & Forward Facing Sonar Rigging</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Comparing Garmin Panoptix Livescope Plus vs. Lowrance ActiveTarget 2. How to mount transducer poles and lithium power banks.
+                        </p>
+                    </div>
+                    <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 mb-4 text-xs space-y-1">
+                        <span class="text-sky-400 font-bold">Key Focus:</span> <span class="text-slate-300">Target separation, battery draw, and transom vs. trolling motor mounts.</span>
+                    </div>
+                    <button class="w-full bg-slate-800 hover:bg-sky-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition">View Electronics Blueprint</button>
+                </div>
+
+                <!-- Boat Rigging Card 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col justify-between hover:border-sky-500/50 transition group shadow-xl">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 border border-sky-500/20 flex items-center justify-center text-xl mb-5">
+                            <i class="fa-solid fa-anchor"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Spot-Lock Trolling Motor Buyer Guide</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Minn Kota Ultrex vs. Rhodan vs. Garmin Force. Selecting shaft length, 24V vs 36V thrust, and saltwater protection.
+                        </p>
+                    </div>
+                    <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 mb-4 text-xs space-y-1">
+                        <span class="text-sky-400 font-bold">Key Focus:</span> <span class="text-slate-300">Anchor GPS lock accuracy in 30kt wind and heavy coastal tides.</span>
+                    </div>
+                    <button class="w-full bg-slate-800 hover:bg-sky-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition">View Trolling Motor Guide</button>
+                </div>
+
+                <!-- Boat Rigging Card 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col justify-between hover:border-sky-500/50 transition group shadow-xl">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 border border-sky-500/20 flex items-center justify-center text-xl mb-5">
+                            <i class="fa-solid fa-dharmachakra"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Offshore Center Console Layout & Rod Racks</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Optimal rod holder positioning, outrigger rigging, livewell aeration systems, and T-Top rocket launcher setups.
+                        </p>
+                    </div>
+                    <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 mb-4 text-xs space-y-1">
+                        <span class="text-sky-400 font-bold">Key Focus:</span> <span class="text-slate-300">Maximizing 4-rod and 8-rod holding capacity while drift fishing.</span>
+                    </div>
+                    <button class="w-full bg-slate-800 hover:bg-sky-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition">View Boat Layout Guide</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: BEST LOCATIONS & DESTINATIONS -->
+        <section id="cat-locations" class="scroll-mt-28 space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-800 pb-6 gap-4">
+                <div>
+                    <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-widest mb-2">
+                        <i class="fa-solid fa-map-location-dot"></i> Category #3 • Global Destinations
+                    </div>
+                    <h2 class="text-3xl font-extrabold text-white">Trophy Fishing Spots & Charters</h2>
+                    <p class="text-slate-400 text-sm">Where to go, peak seasonal timing, licensed captain directories, and secret coordinates.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Location 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition group">
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 mb-3 inline-block">Florida Keys & Everglades</span>
+                        <h3 class="text-lg font-bold text-white mb-2">Tarpon & Bonefish Flats</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            Spring migration timing, backcountry skiff tactics, and essential 10-wt fly rod setups.
+                        </p>
+                        <div class="text-[11px] text-slate-500 border-t border-slate-800 pt-3 flex justify-between">
+                            <span>Prime Months:</span> <strong class="text-emerald-400">April – June</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition group">
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 mb-3 inline-block">Outer Banks, North Carolina</span>
+                        <h3 class="text-lg font-bold text-white mb-2">Giant Bluefin Tuna & Marlin</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            Deepwater trolling tactics off Oregon Inlet, 130lb class heavy gear, and winter bite maps.
+                        </p>
+                        <div class="text-[11px] text-slate-500 border-t border-slate-800 pt-3 flex justify-between">
+                            <span>Prime Months:</span> <strong class="text-emerald-400">Nov – February</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition group">
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 mb-3 inline-block">Kennebec River, Maine</span>
+                        <h3 class="text-lg font-bold text-white mb-2">Trophy Striped Bass Surfcasting</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            Night fishing with 11ft surf rods, custom wooden plugs, and tidal current breaklines.
+                        </p>
+                        <div class="text-[11px] text-slate-500 border-t border-slate-800 pt-3 flex justify-between">
+                            <span>Prime Months:</span> <strong class="text-emerald-400">June – September</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location 4 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition group">
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 mb-3 inline-block">Kenai River, Alaska</span>
+                        <h3 class="text-lg font-bold text-white mb-2">King & Silver Salmon Runs</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            Heavy power rods, backbouncing egg rigs, and guided drift boat lodge recommendations.
+                        </p>
+                        <div class="text-[11px] text-slate-500 border-t border-slate-800 pt-3 flex justify-between">
+                            <span>Prime Months:</span> <strong class="text-emerald-400">July – August</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: HUNTING & WATERFOWL SPORTING -->
+        <section id="cat-hunting" class="scroll-mt-28 space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-800 pb-6 gap-4">
+                <div>
+                    <div class="flex items-center gap-2 text-lime-400 font-bold text-xs uppercase tracking-widest mb-2">
+                        <i class="fa-solid fa-crosshairs"></i> Category #4 • Sporting & Wilderness
+                    </div>
+                    <h2 class="text-3xl font-extrabold text-white">Hunting, Waterfowl & Coastal Sporting</h2>
+                    <p class="text-slate-400 text-sm">Duck blinds, marsh boats, optics, big game gear, and retriever field training.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Hunting Card 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 hover:border-lime-500/50 transition group">
+                    <div class="w-12 h-12 rounded-2xl bg-lime-500/10 text-lime-400 border border-lime-500/20 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-feather"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Coastal Duck Hunting & Marsh Skiff Rigging</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                        Decoy spread strategies for mallards and pintails, waterproof layout blinds, and shotgun choke comparisons.
+                    </p>
+                    <span class="text-xs font-bold text-lime-400 flex items-center gap-1"><i class="fa-solid fa-chevron-right text-[10px]"></i> Read Waterfowl Tactics</span>
+                </div>
+
+                <!-- Hunting Card 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 hover:border-lime-500/50 transition group">
+                    <div class="w-12 h-12 rounded-2xl bg-lime-500/10 text-lime-400 border border-lime-500/20 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-binoculars"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Backcountry Bow & Rifle Gear Blueprints</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                        Lightweight pack hunting setups, thermal imaging optics, rangefinders, and meat processing field kits.
+                    </p>
+                    <span class="text-xs font-bold text-lime-400 flex items-center gap-1"><i class="fa-solid fa-chevron-right text-[10px]"></i> Read Big Game Guides</span>
+                </div>
+
+                <!-- Hunting Card 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 hover:border-lime-500/50 transition group">
+                    <div class="w-12 h-12 rounded-2xl bg-lime-500/10 text-lime-400 border border-lime-500/20 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-dog"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Gundog & Retriever Water Training</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                        E-collar training protocols, neoprene vest insulation for sea ducks, and blind retrieve drills.
+                    </p>
+                    <span class="text-xs font-bold text-lime-400 flex items-center gap-1"><i class="fa-solid fa-chevron-right text-[10px]"></i> Read Dog Training Blueprints</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter & Gear Alert Signup -->
+        <section class="bg-gradient-to-r from-marine-900 via-slate-900 to-marine-950 border border-slate-800 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl">
+            <div class="max-w-3xl mx-auto space-y-4 relative z-10">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-amber-400 bg-amber-500/10 px-3.5 py-1.5 rounded-full border border-amber-500/20">
+                    <i class="fa-solid fa-envelope mr-1"></i> Weekly Outdoor Intelligence
+                </span>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Get Weekly Rod, Tackle & Fishing Location Reports</h3>
+                <p class="text-slate-400 text-xs sm:text-sm">
+                    Join over 45,000 anglers and outdoorsmen receiving seasonal migration alerts, gear price drops, and captain tactical secrets.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email address..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-amber-500">
+                    <button class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-xs px-6 py-3 rounded-xl transition uppercase tracking-wider whitespace-nowrap">
+                        Subscribe Free
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-marine-950 border-t border-slate-800 py-12 px-4 sm:px-6 lg:px-8 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto space-y-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-black text-xl">
+                        4R
+                    </div>
+                    <div>
+                        <span class="text-xl font-black text-white">4Rod<span class="text-amber-500">.com</span></span>
+                        <span class="block text-[10px] uppercase text-slate-500 font-bold">The Sportsman's Digital Network</span>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-slate-400 font-semibold">
+                    <a href="#cat-rods" class="hover:text-amber-400 transition">Fishing Rods</a>
+                    <a href="#cat-boats" class="hover:text-amber-400 transition">Boats & Tech</a>
+                    <a href="#cat-locations" class="hover:text-amber-400 transition">Best Locations</a>
+                    <a href="#cat-hunting" class="hover:text-amber-400 transition">Hunting & Waterfowl</a>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-slate-900 text-center text-[11px] text-slate-600">
+                &copy; 2026 4Rod.com. All rights reserved. Gear trademarks and product names belong to their respective manufacturers.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
